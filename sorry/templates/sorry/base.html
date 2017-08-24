@@ -1,0 +1,22 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Too Little Too Late...</title>
+    <link rel="stylesheet" href="{% static 'css/skeleton.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  </head>
+  <body>
+    <div class="container">
+      <div class="page-header">
+        <a href="{% url 'sorry_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+      </div>
+      <div class="row site-title">
+        <h1><a class="header" href="{% url 'sorry_list'  %}" >I'm sorry for...</a></h1>
+      </div>
+      {% block content %}
+      {% endblock %}
+  </div>
+  </body>
+</html>

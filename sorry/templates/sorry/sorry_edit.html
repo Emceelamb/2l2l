@@ -1,0 +1,10 @@
+{% extends 'sorry/base.html' %}
+
+{% block content %}
+  <h4>I'm sorry for </h4>
+  <form method="POST" class="sorry-form">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type ="submit" class "save">Sorry...</button>
+  </form>
+{% endblock %}

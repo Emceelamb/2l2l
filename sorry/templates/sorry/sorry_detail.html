@@ -1,0 +1,8 @@
+{% extends 'sorry/base.html' %}
+
+{% block content %}
+  <div class="sorry-title">
+    <h4><a class="header" href="{% url 'sorry_detail' pk=sorry.pk %}">I'm so sorry for {{ sorry.title }}...</a></h2>
+    <p>{{ sorry.text|linebreaksbr }}</p>
+  </div>
+{% endblock %}

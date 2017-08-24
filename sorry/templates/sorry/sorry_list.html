@@ -1,11 +1,10 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Too Little Too Late...</title>
-  </head>
-  <body>
-    <h1>Too Little Too Late...</h1>
+{% extends 'sorry/base.html' %}
 
-  </body>
-</html>
+{% block content %}
+  {% for sorry in sorrys %}
+    <div class="sorry-title">
+      <h4><a class="title" href="{% url 'sorry_detail' pk=sorry.pk %}">I'm so sorry for {{ sorry.title }}...</a></h2>
+      <p>{{ sorry.text|linebreaksbr }}</p>
+    </div>
+  {% endfor %}
+{% endblock %}
