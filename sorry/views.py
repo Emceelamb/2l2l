@@ -80,7 +80,7 @@ def sorry_filter_ex(request):
 
 def sorry_filter_fa(request):
     # sorrys = Sorry.objects.get(published_date__lte=timezone.now()).order_by('published_date')
-    sorrys = Sorry.objects.filter(relationship='Fammily').order_by('-id')
+    sorrys = Sorry.objects.filter(relationship='Family').order_by('-id')
     if request.method == "POST":
         form = SorryForm(request.POST)
         if form.is_valid():

@@ -15,9 +15,9 @@ from django.utils import timezone
 # )
 
 RELATIONSHIP = (
+    ('Lover', 'Lover'),
     ('Ex-Lover', 'Ex-Lover'),
     ('Family', 'Family'),
-    ('Significant Other', 'Significant Other'),
     ('Friend', 'Friend'),
     ('Enemy', 'Enemy'),
     ('Co-Worker', 'Co-Worker'),

@@ -12,9 +12,9 @@ from .models import Sorry
 #
 # )
 RELATIONSHIP = (
+    ('Lover', 'Lover'),
     ('Ex-Lover', 'Ex-Lover'),
     ('Family', 'Family'),
-    ('Significant Other', 'Significant Other'),
     ('Friend', 'Friend'),
     ('Enemy', 'Enemy'),
     ('Co-Worker', 'Co-Worker'),
