@@ -34,6 +34,7 @@
         <form method="POST" class="sorry-form">
           {% csrf_token %}
           <h4>I'm so sorry for {{ form.title }}</h4>
+          {{ form.relationship }}
           {{ form.text }}
           <button type ="submit" class "save">Sorry...</button>
         </form>

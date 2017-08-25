@@ -4,6 +4,8 @@
   {% for sorry in sorrys %}
     <div class="sorry-title">
       <h4><a class="title" href="{% url 'sorry_detail' pk=sorry.pk %}">I'm so sorry for {{ sorry.title }}...</a></h2>
+      <h7 class="relationship">{{ sorry.relationship }}</h7>
+
       <p>{{ sorry.text|linebreaksbr }}</p>
     </div>
   {% endfor %}
