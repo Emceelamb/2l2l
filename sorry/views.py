@@ -41,4 +41,17 @@ def mainView(request):
     else:
         form =SorryForm()
     # return render(request, 'sorry/sorry_edit.html', {'form':form})
+
     return render(request, 'sorry/sorry_list.html', {'sorrys': sorrys, 'form':form})
+
+def sorry_detail(request, pk):
+    sorry = get_object_or_404(Sorry, pk=pk)
+    if request.method == "POST":
+        form = SorryForm(request.POST)
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.save()
+            return redirect('sorry_list')
+    else:
+        form =SorryForm()
+    return render(request, 'sorry/sorry_detail.html', {'sorry':sorry, 'form':form})

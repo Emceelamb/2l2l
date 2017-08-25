@@ -72,4 +72,21 @@ function animate() {
 animate();
 
 
+var app = document.getElementById('typewriter');
+
+var typewriter = new Typewriter(app, {
+  loop: true
+});
+
+typewriter.typeString('not being there...')
+.pauseFor(2500)
+.deleteAll()
+.typeString('everything...')
+.pauseFor(2500)
+.deleteChars(3)
+.typeString(' and anything...')
+.pauseFor(2500)
+.deleteAll()
+.typeString('nothing...')
+.start();
 }

@@ -20,9 +20,17 @@ textarea{
 
 .trail { /* className for the trail elements */
     position: absolute;
-    height: 100px; width: 100px;
-    /*border-radius: 3px;*/
+    height: 25px; width: 25px;
+    border-radius: 3px;
     /*background: teal;*/
-    background-image: url("https://cdn.shopify.com/s/files/1/1061/1924/products/Crying_Face_Emoji_small.png");
+    background-image: url('cry_small.png');
+
+    /*background-image: url("https://cdn.shopify.com/s/files/1/1061/1924/products/Crying_Face_Emoji_small.png");*/
   }
 /**/
+/**/
+.hero{
+  height:250px;
+  display:table-cell;
+  line-height:20
+}

@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{% static 'css/skeleton.css' %}">
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <script src="{% static 'js/background.js' %}"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/TypewriterJS/1.0.0/typewriter.min.js"></script>
   </head>
   <body>
     <div class="container" >
@@ -16,10 +16,10 @@
       </div> -->
       <div class="hero">
 
-      <div class="row">
-        <div class="twelve columns">
+      <div class="row hero">
+        <div class="twelve columns hero">
 
-        <h1><a class="header" href="{% url 'sorry_list'  %}" >I'm sorry for...</a></h1>
+        <span id="heroText"><h1><a class="header" href="{% url 'sorry_list'  %}" >I'm sorry for </a><span id="typewriter"></span></h1></span>
       </div>
       </div>
     </div>
@@ -33,7 +33,7 @@
 
         <form method="POST" class="sorry-form">
           {% csrf_token %}
-          <h4>I'm sorry for {{ form.title }}</h4>
+          <h4>I'm so sorry for {{ form.title }}</h4>
           {{ form.text }}
           <button type ="submit" class "save">Sorry...</button>
         </form>
