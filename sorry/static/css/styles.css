@@ -17,10 +17,17 @@ textarea{
     width: 140px;
 }
 
+.fade {
+   opacity: 1;
+   transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+   }
+
 .fade:hover {
   opacity: 0.5;
-}
-
+  }
+  
 .trail { /* className for the trail elements */
     position: absolute;
     height: 15px; width: 15px;
