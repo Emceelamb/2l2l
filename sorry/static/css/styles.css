@@ -14,7 +14,7 @@ textarea{
 }
 
 #id_title {
-    width: 180px;
+    width: 140px;
 }
 
 
@@ -37,4 +37,15 @@ textarea{
 
 .hero-text {
     margin-top: 100px;
+}
+
+#id_text {
+  width:100%;
+}
+
+.sidebar .stuck{
+  width:100px;
+}
+.stuck {
+  position: fixed;
 }

@@ -25,19 +25,22 @@
     </div>
     <div class="row">
 
-      <div class="seven columns" >
+      <div class="eight columns" >
         {% block content %}
         {% endblock %}
       </div>
-      <div class="five columns" >
+      <div class="four columns" >
+        <div class="side-bar stuck">
 
         <form method="POST" class="sorry-form">
           {% csrf_token %}
           <h4>I'm sorry for {{ form.title }}</h4>
           To My {{ form.relationship }}
+          <br/>
           {{ form.text }}
           <button type ="submit" class "save">Sorry...</button>
         </form>
+      </div>
       </div>
     </div>
   </div>
