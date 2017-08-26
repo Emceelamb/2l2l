@@ -3,8 +3,8 @@
 {% block content %}
   {% for sorry in sorrys %}
     <div class="sorry-title">
-      <h4><a class="title" href="{% url 'sorry_detail' pk=sorry.pk %}">I'm so sorry for {{ sorry.title }}...</a></h2>
-          <a class="title"href='/{{ sorry.relationship }}'> <h7 class="relationship" style=" text-transform: uppercase;">{{ sorry.relationship }}</h7></a>
+      <h4><a class="title" href="{% url 'sorry_detail' pk=sorry.pk %}">I'm sorry for {{ sorry.title }}...</a></h2>
+        <a class="title"href='/{{ sorry.relationship }}'> <h7 class="relationship" style=" text-transform: uppercase;"><span>To my </span>{{ sorry.relationship }}</h7></a>
 
       <p>{{ sorry.text|linebreaksbr }}</p>
     </div>

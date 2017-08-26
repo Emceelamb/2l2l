@@ -30,7 +30,7 @@ Dot.prototype.draw = function() {
 };
 
 // Creates the Dot objects, populates the dots array
-for (var i = 0; i < 12; i++) {
+for (var i = 0; i < 20; i++) {
   var d = new Dot();
   dots.push(d);
 }
@@ -83,10 +83,10 @@ typewriter.typeString('not being there...')
 .deleteAll()
 .typeString('everything...')
 .pauseFor(2500)
-.deleteChars(3)
-.typeString(' and anything...')
+.deleteAll()
+.typeString(' that this is too little and too late...')
 .pauseFor(2500)
 .deleteAll()
-.typeString('nothing...')
+// .typeString('nothing...')
 .start();
 }

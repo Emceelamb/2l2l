@@ -16,8 +16,8 @@
       </div> -->
       <div class="hero">
 
-      <div class="row hero">
-        <div class="twelve columns hero">
+      <div class="row hero-text">
+        <div class="twelve columns">
 
         <span id="heroText"><h1><a class="header" href="{% url 'sorry_list'  %}" >I'm sorry for </a><span id="typewriter"></span></h1></span>
       </div>
@@ -33,8 +33,8 @@
 
         <form method="POST" class="sorry-form">
           {% csrf_token %}
-          <h4>I'm so sorry for {{ form.title }}</h4>
-          {{ form.relationship }}
+          <h4>I'm sorry for {{ form.title }}</h4>
+          To My {{ form.relationship }}
           {{ form.text }}
           <button type ="submit" class "save">Sorry...</button>
         </form>

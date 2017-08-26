@@ -94,7 +94,7 @@ def sorry_filter_fa(request):
 
 def sorry_filter_so(request):
     # sorrys = Sorry.objects.get(published_date__lte=timezone.now()).order_by('published_date')
-    sorrys = Sorry.objects.filter(relationship='Significant Other').order_by('-id')
+    sorrys = Sorry.objects.filter(relationship='Lover').order_by('-id')
     if request.method == "POST":
         form = SorryForm(request.POST)
         if form.is_valid():
