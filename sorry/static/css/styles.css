@@ -17,6 +17,9 @@ textarea{
     width: 140px;
 }
 
+.fade:hover {
+  opacity: 0.5;
+}
 
 .trail { /* className for the trail elements */
     position: absolute;
