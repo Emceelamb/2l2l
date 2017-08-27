@@ -1,10 +1,112 @@
-{% extends 'sorry/base.html' %}
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Too Little Too Late...</title>
+    <link rel="stylesheet" href="{% static 'css/skeleton.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <script src="{% static 'js/background.js' %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/TypewriterJS/1.0.0/typewriter.min.js"></script>
+    <link rel="shortcut icon" href="favicon.ico" >
+    <link rel="icon" type="image/gif" href="animated_favicon1.gif" >
 
-{% block content %}
-  <h4>I'm sorry for </h4>
-  <form method="POST" class="sorry-form">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type ="submit" class "save">Sorry...</button>
-  </form>
-{% endblock %}
+  </head>
+  <body>
+    <div class="container" >
+        <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h1 class="title">
+      <p>Some times saying sorry is hard.</p>
+    </h1>
+    </div>
+
+  </div>
+
+        <!-- <div class="page-header">
+          <a href="/sorry" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+        </div> -->
+        <div class="row">
+          <div class="twelve columns">
+            <div class="categories">
+
+              <ul class="menu">
+                <li class="menu-item"><span><a href="/Lover" class="menu-link title fade">Lover</a></span></li>
+                <li class="menu-item"><span><a href="/Ex-Lover" class="menu-link title fade">Ex-Lover</a></span></li>
+                <li class="menu-item"><span><a href="/Family" class="menu-link title fade">Family</a></span></li>
+                <li class="menu-item"><span><a href="/Friend" class="menu-link title fade">Friend</a></span></li>
+                <li class="menu-item"><span><a href="/Enemy" class="menu-link title fade">Enemy</a></span></li>
+                <li class="menu-item"><span><a href="/Co-Worker" class="menu-link title fade">Co-Woker</a></span></li>
+                <li class="menu-item"><span><a href="/Stranger" class="menu-link title fade">Stranger</a></span></li>
+                <!-- <li class="menu-item"><span id="about"><a href='#' class="menu-link">About</a></span></li> -->
+              </ul>
+            </div>
+              <!-- <div class="secondary"> -->
+
+              <ul class="menu-2">
+                <li class="menu-item"><span><a href="/sorry" class="menu-link title fade">Sorry</a></span></li>
+                <li class="menu-item"><span id="about"><a href='#' class="menu-link title fade">About</a></span></li>
+              </ul>
+            <!-- </div> -->
+          </div>
+        </div>
+
+
+      <div class="hero">
+
+      <div class="row hero-text">
+        <div class="twelve columns">
+
+        <span id="heroText"><h1 class="fade"><a class="header" href="{% url 'sorry_list'  %}" >I'm sorry for </a><span id="typewriter"></span></h1></span>
+      </div>
+      </div>
+    </div>
+    <div class="row">
+
+      <div class="eight columns" >
+        <h4>I'm sorry for </h4>
+        <form method="POST" class="sorry-form">
+          {% csrf_token %}
+          {{ form.as_p }}
+          <button type ="submit" class "save">Sorry...</button>
+        </form>
+      </div>
+      <div class="four columns" >
+
+      </div>
+    </div>
+  </div>
+
+
+    <script>
+      // Get the modal
+      var modal = document.getElementById('myModal');
+
+      // Get the button that opens the modal
+      var about = document.getElementById("about");
+
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+
+      // When the user clicks the button, open the modal
+      about.onclick = function() {
+          modal.style.display = "block";
+      }
+
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function() {
+          modal.style.display = "none";
+      }
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+          if (event.target == modal) {
+              modal.style.display = "none";
+          }
+      }
+      </script>
+  </body>
+</html>
