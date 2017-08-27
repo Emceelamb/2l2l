@@ -126,4 +126,4 @@ USE_TZ = True
 
 # prod
 STATIC_URL = '/'
-STATIC_ROOT = '/home/ml_des/tootlittletoolate.markofthelam.com/public'
+STATIC_ROOT = '/home/ml_des/toolittletoolate.markofthelam.com/public'
