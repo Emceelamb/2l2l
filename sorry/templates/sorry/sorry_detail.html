@@ -1,9 +1,9 @@
 {% extends 'sorry/base.html' %}
 
 {% block content %}
-  <div class="sorry-title fade">
-    <h4><a class="header" href="{% url 'sorry_detail' pk=sorry.pk %}">I'm so sorry for {{ sorry.title }}...</a></h2>
-     <a class="title"href='/{{ sorry.relationship }}'> <h7 class="relationship" style=" text-transform: uppercase;"><span>To my </span>{{ sorry.relationship }}</h7></a>
+  <div class="sorry-title">
+    <h4><a class="header fade" href="{% url 'sorry_detail' pk=sorry.pk %}">I'm so sorry for {{ sorry.title }}...</a></h2>
+     <a class="title fade"href='/{{ sorry.relationship }}'> <h7 class="relationship" style=" text-transform: uppercase;"><span>To my </span>{{ sorry.relationship }}</h7></a>
 
     <p>{{ sorry.text|linebreaksbr }}</p>
   </div>
