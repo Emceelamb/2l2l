@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '@5o!0#x^xq!3@&d_75o*d#=^4@0^s!8$oox6-mb@vl#7+67c8@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1','.toolittletoolate.markofthelam.com']
 
@@ -120,11 +120,10 @@ USE_TZ = True
 
 
 # dev css
-STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# STATIC_URL = '/static/'
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 
 # prod
-# STATIC_URL = '/'
-# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-# STATIC_ROOT = '/home/ml_des/tootlittletoolate.markofthelam.com/public'
+STATIC_URL = '/'
+STATIC_ROOT = '/home/ml_des/tootlittletoolate.markofthelam.com/public'
