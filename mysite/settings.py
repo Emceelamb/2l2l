@@ -25,7 +25,7 @@ SECRET_KEY = '@5o!0#x^xq!3@&d_75o*d#=^4@0^s!8$oox6-mb@vl#7+67c8@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1','.toolittletoolate.markofthelam.com']
+ALLOWED_HOSTS = ['127.0.0.1','.toolittletoolate.markofthelam.com','.toolittletoolate.club']
 
 
 # Application definition
@@ -126,4 +126,7 @@ USE_TZ = True
 
 # prod
 STATIC_URL = '/'
-STATIC_ROOT = '/home/ml_des/toolittletoolate.markofthelam.com/public'
+
+STATIC_ROOT = '/home/ml_des/toolittletoolate.club/public'
+
+# STATIC_ROOT = '/home/ml_des/toolittletoolate.markofthelam.com/public'
