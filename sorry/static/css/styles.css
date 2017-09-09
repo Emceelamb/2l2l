@@ -17,6 +17,15 @@ textarea{
     width: 140px;
 }
 
+.fa {
+  color:gray;
+}
+
+.sharing-is-caring {
+  float: right;
+  font-size:20px;
+}
+
 .fade {
    opacity: 1;
    transition: opacity .25s ease-in-out;

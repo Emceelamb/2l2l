@@ -3,7 +3,14 @@
 {% block content %}
   {% for sorry in sorrys %}
     <div class="sorry-title">
-      <h4><a class="title fade" href="{% url 'sorry_detail' pk=sorry.pk %}">I'm sorry for {{ sorry.title }}...</a></h2>
+      <h4><a class="title fade" href="{% url 'sorry_detail' pk=sorry.pk %}">I'm sorry for {{ sorry.title }}...</a>  <span class="sharing-is-caring">
+        <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://toolittletoolate.club{% url 'sorry_detail' pk=sorry.pk %}">
+          <i class="fa fa-facebook-official" aria-hidden="true"></i></a> 
+          <a class="twitter-share-button"
+          href="https://twitter.com/intent/tweet?text=I'm sorry for {{sorry.title}}...  https://toolittletoolate.club{% url 'sorry_detail' pk=sorry.pk %}">
+          <i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+        </span></h4>
+      
         <a class="title fade"href='/{{ sorry.relationship }}'> <h7 class="relationship" style=" text-transform: uppercase;"><span>To my </span>{{ sorry.relationship }}</h7></a>
 
       <p>{{ sorry.text|linebreaksbr }}</p>
