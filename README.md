@@ -2,4 +2,4 @@
 
 Django project
 
-[Project website](https://toolittletoolate.markofthelam.com)
+[Project website](https://toolittletoolate.club)
